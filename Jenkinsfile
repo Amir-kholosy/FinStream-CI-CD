@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t finstream .'
+                sh 'docker build -t finstream .'
             }
         }
 
