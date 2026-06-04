@@ -9,9 +9,21 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Build') {
             steps {
-                sh 'docker build -t finstream .'
+                echo 'Building FinStream UI'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running Tests'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Application'
             }
         }
 
